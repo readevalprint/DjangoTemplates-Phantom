@@ -1,5 +1,8 @@
 {
-	"page_title": "Phantom by HTML5 UP",
+	"page": {
+		"page_title": "Phantom by HTML5 UP",
+	},
+
 	"sections": [
 		{
 			""
