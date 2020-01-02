@@ -10,8 +10,8 @@
 		<title>{{ title }}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="{% static "phantom_template/assets/css/main.css" %}" />
+		<noscript><link rel="stylesheet" href="{% static "phantom_template/assets/css/noscript.css" %}" /></noscript>
 	</head>
 	<body class="is-preload">				
 		<header id="header">
@@ -39,18 +39,57 @@
 				{% endfor %}
 			</ul>
 		</nav>
-		<!-- Wrapper -->
-			<div id="wrapper">
-				{% block content %}
-				{% endblock%}
-			</div>
+		<!-- Wrapper for main content -->
+		<div id="wrapper">
+			{% block content %}
+			{% endblock%}
+		</div>
+
+		<footer id="footer">
+		    <div class="inner">
+		        <section>
+		            <h2>{{ footer.get_in_touch.title }}</h2>
+		            <form method="post" action="#">
+		                <div class="fields">
+		                    <div class="field half">
+		                        <input type="text" name="name" id="name" placeholder="{{ footer.get_in_touch.name_input_placeholder }}" />
+		                    </div>
+		                    <div class="field half">
+		                        <input type="email" name="email" id="email" placeholder="{{ footer.get_in_touch.email_input_placeholder }}" />
+		                    </div>
+		                    <div class="field">
+		                        <textarea name="message" id="message" placeholder="{{ footer.get_in_touch.message_input_placeholder }}"></textarea>
+		                    </div>
+		                </div>
+		                <ul class="actions">
+		                    <li>
+		                        <input type="submit" value="{{ footer.get_in_touch.submit_btn_txt }}" class="primary" />
+		                    </li>
+		                </ul>
+		            </form>
+		        </section>
+		        <section>
+		            <h2>{{ footer.icon_section.title }}</h2>
+		            <ul class="icons">
+		            	{% for icon in footer.icons %}
+		                	<li><a href="{{ icon.link }}" class="icon brands style2 {{ icon.icon }}"><span class="label">{{ icon.name }}</span></a></li>
+		            	{% endfor %}
+		            </ul>
+		        </section>
+		        <ul class="copyright">
+		        	{% for info in footer.bottom_info %}
+		            	<li>{{ info }}</li>
+		            {% endfor %}
+		        </ul>
+		    </div>
+		</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{% static "phantom_template/assets/js/jquery.min.js" %}"></script>
+			<script src="{% static "phantom_template/assets/js/browser.min.js" %}"></script>
+			<script src="{% static "phantom_template/assets/js/breakpoints.min.js" %}"></script>
+			<script src="{% static "phantom_template/assets/js/util.js" %}"></script>
+			<script src="{% static "phantom_template/assets/js/main.js" %}"></script>
 
 	</body>
 </html>

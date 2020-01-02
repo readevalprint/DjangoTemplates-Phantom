@@ -68,5 +68,40 @@
 			"img_align": "left",
 			"content": "Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent."
 		}
-	]
+	],
+
+	"footer": {
+		"get_in_touch": {
+			"title": "Get in touch",
+			"name_input_placeholder": "Name",
+			"email_input_placeholder": "Email",
+			"message_input_placeholder": "Message",
+			"submit_btn_txt": "Send"
+		},
+
+		"icon_section": {
+			"title": "Follow",
+			"icons": [
+				{
+					"name": "Twitter",
+					"link": "#",
+					"icon": "fa-twitter"
+				},
+				{
+					"name": "Facebook",
+					"link": "#",
+					"icon": "fa-facebook-f"
+				},
+				{
+					"name": "Instagram",
+					"link": "#",
+					"icon": "fa-instagram"
+				},
+			]
+		},
+
+		"bottom_info": [
+			"© Untitled. All rights reserved",
+		]
+	}
 }
