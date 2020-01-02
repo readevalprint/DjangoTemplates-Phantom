@@ -1,0 +1,15 @@
+<section class="tiles">
+	{% for tile in section.items %}
+		<article class="{{ tile.class }}">
+			<span class="image">
+				<img src="{{ tile.img }}" alt="" />
+			</span>
+			<a href="{{ tile.link }}">
+				<h2>{{ tile.name }}</h2>
+				<div class="content">
+					<p>{{ tile.content }}</p>
+				</div>
+			</a>
+		</article>
+	{% endfor %}
+</section>

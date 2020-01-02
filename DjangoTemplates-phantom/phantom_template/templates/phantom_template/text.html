@@ -1,0 +1,13 @@
+<h3>{{ section.title }}<h3>
+<p>
+{% if section.img_align == "left" %}
+	<span class="image left">
+
+{% elif section.img_align == "right" %}
+	<span class="image right">
+
+{% endif %}
+	<img src="{{ section.img }}" alt="" /></span>
+	{{ section.content }}
+</p>
+
