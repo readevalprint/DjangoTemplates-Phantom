@@ -3,7 +3,7 @@
 		"page_title": "Phantom by HTML5 UP",
 		"header_title": "Phantom",
 		"header_link": "index.html",
-		"header_logo": "images/logo.svg"
+		"header_logo": "phantom_template/images/logo.svg"
 	},
 
 	"navbar": {
@@ -42,19 +42,19 @@
 			"type": "tiles",
 			"items": [
 				{
-					"img": "images/pic01.jpg",
+					"img": "phantom_template/images/pic01.jpg",
 					"class": "style1",
 					"link": "generic.html",
 					"content": "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
 				},
 				{
-					"img": "images/pic02.jpg",
+					"img": "phantom_template/images/pic02.jpg",
 					"class": "style2",
 					"link": "generic.html",
 					"content": "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
 				},
 				{
-					"img": "images/pic03.jpg",
+					"img": "phantom_template/images/pic03.jpg",
 					"class": "style3",
 					"link": "generic.html",
 					"content": "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
@@ -64,14 +64,14 @@
 		{
 			"type": "text",			
 			"title": "Text Section",
-			"img": "images/pic14.jpg",
+			"img": "phantom_template/images/pic14.jpg",
 			"img_align": "left",
 			"content": "Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent."
 		},
 		{
 			"type": "page",
 			"title": "Generic Page",
-			"img": "images/pic13.jpg",
+			"img": "phantom_template/images/pic13.jpg",
 			"content": [
 				"Donec eget ex magna. Interdum et malesuada, et malesuada fames.",
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
