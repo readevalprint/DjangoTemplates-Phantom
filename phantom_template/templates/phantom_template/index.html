@@ -6,6 +6,7 @@
 			<div class="inner">
 				{% for section in sections %}
 					{% if section.type == "header" %}
+					<p> hey <p>
 						{% include "header.html" %}
 					{% elif section.type == "tiles" %}
 						{% include "tiles.html" %}
