@@ -2,7 +2,7 @@
 	{% for tile in section.items %}
 		<article class="{{ tile.class }}">
 			<span class="image">
-				<img src="{{ tile.img }}" alt="" />
+				<img src="{% static tile.img %}" alt="" />
 			</span>
 			<a href="{{ tile.link }}">
 				<h2>{{ tile.name }}</h2>
