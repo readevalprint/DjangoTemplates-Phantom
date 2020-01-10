@@ -238,6 +238,16 @@
                     "content"
                   ],
                   "properties": {
+                    "name": {
+                      "$id": "#/properties/items/items/properties/name",
+                      "type": "string",
+                      "title": "Tile Name",
+                      "default": "",
+                      "examples": [
+                        "Tile1"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
                     "img": {
                       "$id": "#/properties/items/items/properties/img",
                       "type": "string",
