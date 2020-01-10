@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "phantom_template/base.html" %}
 
 {% block content %}
 	<!-- Main -->
@@ -6,13 +6,13 @@
 			<div class="inner">
 				{% for section in sections %}
 					{% if section.type == "header" %}
-						{% include "header.html" %}
+						{% include "phantom_template/header.html" %}
 					{% elif section.type == "tiles" %}
-						{% include "tiles.html" %}
+						{% include "phantom_template/tiles.html" %}
 					{% elif section.type == "text" %}
-						{% include "text.html" %}
+						{% include "phantom_template/text.html" %}
 					{% elif section.type == "page" %}
-						{% include "generic.html" %}
+						{% include "phantom_template/generic.html" %}
 					{% endif %}
 				{% endfor %}
 			</div>
