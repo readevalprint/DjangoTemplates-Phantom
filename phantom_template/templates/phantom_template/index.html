@@ -11,6 +11,8 @@
 						{% include "tiles.html" %}
 					{% elif section.type == "text" %}
 						{% include "text.html" %}
+					{% elif section.type == "page" %}
+						{% include "generic.html" %}
 					{% endif %}
 				{% endfor %}
 			</div>

@@ -1,0 +1,452 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "context/phantom_schema.json",
+  "type": "object",
+  "title": "Index Page - Phantom",
+  "required": [
+    "page",
+    "navbar",
+    "sections",
+    "footer"
+  ],
+  "properties": {
+    "page": {
+      "$id": "#/properties/page",
+      "type": "object",
+      "title": "The Page Schema",
+      "required": [
+        "page_title",
+        "header_title",
+        "header_link",
+        "header_logo"
+      ],
+      "properties": {
+        "page_title": {
+          "$id": "#/properties/page/properties/page_title",
+          "type": "string",
+          "title": "Page Title",
+          "default": "",
+          "examples": [
+            "Phantom by HTML5 UP"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "header_title": {
+          "$id": "#/properties/page/properties/header_title",
+          "type": "string",
+          "title": "Header Title",
+          "default": "",
+          "examples": [
+            "Phantom"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "header_link": {
+          "$id": "#/properties/page/properties/header_link",
+          "type": "string",
+          "title": "Header Link",
+          "default": "",
+          "examples": [
+            "index.html"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "header_logo": {
+          "$id": "#/properties/page/properties/header_logo",
+          "type": "string",
+          "title": "Header Logo Image",
+          "default": "",
+          "examples": [
+            "phantom_template/images/logo.svg"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "navbar": {
+      "$id": "#/properties/navbar",
+      "type": "object",
+      "title": "Navigation Bar",
+      "required": [
+        "name",
+        "contents"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/properties/navbar/properties/name",
+          "type": "string",
+          "title": "Navbar Title",
+          "default": "",
+          "examples": [
+            "Menu"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "contents": {
+          "$id": "#/properties/navbar/properties/contents",
+          "type": "array",
+          "title": "Navbar Links",
+          "items": {
+            "$id": "#/properties/navbar/properties/contents/items",
+            "type": "object",
+            "title": "Nav Item",
+            "required": [
+              "name",
+              "link"
+            ],
+            "properties": {
+              "name": {
+                "$id": "#/properties/navbar/properties/contents/items/properties/name",
+                "type": "string",
+                "title": "Item Name",
+                "default": "",
+                "examples": [
+                  "Home"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "link": {
+                "$id": "#/properties/navbar/properties/contents/items/properties/link",
+                "type": "string",
+                "title": "Item Link",
+                "default": "",
+                "examples": [
+                  "index.html"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "sections": {
+      "$id": "#/properties/sections",
+      "type": "array",
+      "title": "Page Sections",
+      "items": {
+        "$id": "#/properties/sections/items",
+        "type": "object",
+        "title": "Section",
+        "oneOf": [
+          { 
+            "type": "object",
+            "title": "Header",
+            "properties": {
+              "type": {
+                "title": "Type",
+                "type": "string",
+                "enum": ["header"],
+                "default": "header"
+              },
+              "title": {
+                "$id": "#/properties/sections/items/oneOf/Header/BigTitle",
+                "type": "string",
+                "title": "Big Title",
+                "default": "",
+                "examples": [
+                  "Phantom"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "text": {
+                "$id": "#properties/sections/items/oneOf/Header/TagLine",
+                "type": "string",
+                "title": "Tag Line",
+                "default": "",
+                "examples": [
+                  "This is phantom, a free, fully responsive site"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "title": "Title & Paragraph Section",
+            "properties": {
+              "type": {
+                "title": "Type",
+                "type": "string",
+                "enum": ["text"],
+                "default": "text"
+              },
+              "title": {
+                "$id": "#/properties/sections/items/oneOf/properties/title",
+                "type": "string",
+                "title": "Title",
+                "default": "",
+                "examples": [
+                  "This is Phantom, a free, fully responsive site"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "img": {
+                "$id": "#/properties/masthead/properties/img",
+                "type": "string",
+                "title": "Image",
+                "media": {
+                    "binaryEncoding": "base64",
+                    "type": "img/png"
+                },
+                "default": "",
+                "pattern": "^(.*)$"
+              },
+              "img_align": {
+                "$id": "#/properties/sections/items/oneOf/properties/title",
+                "type": "string",
+                "title": "Image Alignment",
+                "default": "",
+                "enum": ["left", "right"],
+                "pattern": "^(.*)$"
+              },
+              "content": {
+                "$id": "#/properties/sections/items/oneOf/properties/text",
+                "type": "string",
+                "title": "Text",
+                "default": "",
+                "examples": [
+                  "Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore."
+                ],
+                "pattern": "^(.*)$"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "title": "Tiles Section",
+            "properties": {
+              "type": {
+                "title": "Type",
+                "type": "string",
+                "enum": ["tiles"],
+                "default": "tiles"
+              },
+              "items": {
+                "title": "Tile Items",
+                "type": "array",
+                "items": {
+                  "$id": "#/properties/items/items",
+                  "type": "object",
+                  "title": "Tile",
+                  "required": [
+                    "img",
+                    "class",
+                    "link",
+                    "content"
+                  ],
+                  "properties": {
+                    "img": {
+                      "$id": "#/properties/items/items/properties/img",
+                      "type": "string",
+                      "title": "Tile Image",
+                      "default": "",
+                      "examples": [
+                        "phantom_template/images/pic01.jpg"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "class": {
+                      "$id": "#/properties/items/items/properties/class",
+                      "type": "string",
+                      "title": "Tile Class",
+                      "default": "style1",
+                      "examples": [
+                        "style1",
+                        "style2",
+                        "style3"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "link": {
+                      "$id": "#/properties/items/items/properties/link",
+                      "type": "string",
+                      "title": "Tile Link",
+                      "default": "",
+                      "examples": [
+                        "generic.html"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "content": {
+                      "$id": "#/properties/items/items/properties/content",
+                      "type": "string",
+                      "title": "Tile Content",
+                      "default": "",
+                      "examples": [
+                        "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
+                      ],
+                      "pattern": "^(.*)$"
+                    }
+                  }
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "footer": {
+      "$id": "#/properties/footer",
+      "type": "object",
+      "title": "Footer",
+      "required": [
+        "get_in_touch",
+        "icon_section",
+        "bottom_info"
+      ],
+      "properties": {
+        "get_in_touch": {
+          "$id": "#/properties/footer/properties/get_in_touch",
+          "type": "object",
+          "title": "Get in Touch Section",
+          "required": [
+            "title",
+            "name_input_placeholder",
+            "email_input_placeholder",
+            "message_input_placeholder",
+            "submit_btn_txt"
+          ],
+          "properties": {
+            "title": {
+              "$id": "#/properties/footer/properties/get_in_touch/properties/title",
+              "type": "string",
+              "title": "Title",
+              "default": "",
+              "examples": [
+                "Get in touch"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "name_input_placeholder": {
+              "$id": "#/properties/footer/properties/get_in_touch/properties/name_input_placeholder",
+              "type": "string",
+              "title": "Name Input Placeholder",
+              "default": "",
+              "examples": [
+                "Name"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "email_input_placeholder": {
+              "$id": "#/properties/footer/properties/get_in_touch/properties/email_input_placeholder",
+              "type": "string",
+              "title": "Email Input Placeholder",
+              "default": "",
+              "examples": [
+                "Email"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "message_input_placeholder": {
+              "$id": "#/properties/footer/properties/get_in_touch/properties/message_input_placeholder",
+              "type": "string",
+              "title": "Message Input Placeholder",
+              "default": "",
+              "examples": [
+                "Message"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "submit_btn_txt": {
+              "$id": "#/properties/footer/properties/get_in_touch/properties/submit_btn_txt",
+              "type": "string",
+              "title": "Submit Button Text",
+              "default": "",
+              "examples": [
+                "Send"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "icon_section": {
+          "$id": "#/properties/footer/properties/icon_section",
+          "type": "object",
+          "title": "Icon Section",
+          "required": [
+            "title",
+            "icons"
+          ],
+          "properties": {
+            "title": {
+              "$id": "#/properties/footer/properties/icon_section/properties/title",
+              "type": "string",
+              "title": "Title",
+              "default": "",
+              "examples": [
+                "Follow"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "icons": {
+              "$id": "#/properties/footer/properties/icon_section/properties/icons",
+              "type": "array",
+              "title": "Icons",
+              "items": {
+                "$id": "#/properties/footer/properties/icon_section/properties/icons/items",
+                "type": "object",
+                "title": "Icon",
+                "required": [
+                  "name",
+                  "link",
+                  "icon"
+                ],
+                "properties": {
+                  "name": {
+                    "$id": "#/properties/footer/properties/icon_section/properties/icons/items/properties/name",
+                    "type": "string",
+                    "title": "Icon Name",
+                    "default": "",
+                    "examples": [
+                      "Twitter"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "link": {
+                    "$id": "#/properties/footer/properties/icon_section/properties/icons/items/properties/link",
+                    "type": "string",
+                    "title": "Icon Link",
+                    "default": "",
+                    "examples": [
+                      "#"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "icon": {
+                    "$id": "#/properties/footer/properties/icon_section/properties/icons/items/properties/icon",
+                    "type": "string",
+                    "title": "Icon (fa)",
+                    "default": "",
+                    "examples": [
+                      "fa-twitter"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "bottom_info": {
+          "$id": "#/properties/footer/properties/bottom_info",
+          "type": "array",
+          "title": "Page Bottom Info",
+          "items": {
+            "$id": "#/properties/footer/properties/bottom_info/items",
+            "type": "string",
+            "title": "Info Line",
+            "default": "",
+            "examples": [
+              "© Untitled. All rights reserved"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}
