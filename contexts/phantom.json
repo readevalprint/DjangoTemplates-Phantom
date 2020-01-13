@@ -42,18 +42,21 @@
 			"type": "tiles",
 			"items": [
 				{
+					"name": "Tile1",
 					"img": "phantom_template/images/pic01.jpg",
 					"class": "style1",
 					"link": "generic.html",
 					"content": "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
 				},
 				{
+					"name": "Tile1",
 					"img": "phantom_template/images/pic02.jpg",
 					"class": "style2",
 					"link": "generic.html",
 					"content": "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
 				},
 				{
+					"name": "Tile1",
 					"img": "phantom_template/images/pic03.jpg",
 					"class": "style3",
 					"link": "generic.html",

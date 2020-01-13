@@ -1,6 +1,5 @@
 {% load static %}
 <h3>{{ section.title }}<h3>
-<p>
 {% if section.img_align == "left" %}
 	<span class="image left">
 
@@ -9,6 +8,7 @@
 
 {% endif %}
 	<img src="{% static section.img %}" alt="" /></span>
+	<p>
 	{{ section.content }}
 </p>
 

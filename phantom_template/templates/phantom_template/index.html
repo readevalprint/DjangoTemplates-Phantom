@@ -11,6 +11,8 @@
 						{% include "phantom_template/tiles.html" %}
 					{% elif section.type == "text" %}
 						{% include "phantom_template/text.html" %}
+					{% elif section.type == "page" %}
+						{% include "phantom_template/generic.html" %}
 					{% endif %}
 				{% endfor %}
 			</div>
