@@ -13,34 +13,35 @@
 		<link rel="stylesheet" href="{% static "phantom_template/assets/css/main.css" %}" />
 		<noscript><link rel="stylesheet" href="{% static "phantom_template/assets/css/noscript.css" %}" /></noscript>
 	</head>
-	<body class="is-preload">				
-		<!-- Wrapper for main content -->
-		<header id="header">
-			<div class="inner">
-				<!-- Logo -->
-					<a href="{{ page.header_link }}" class="logo">
-						<span class="symbol"><img src="{% static page.header_logo %}" alt="" /></span><span class="title">{{ page.header_title }}</span>
-					</a>
-
-				<!-- Nav -->
-					<nav>
-						<ul>
-							<li><a href="#menu">{{ navbar.name }}</a></li>
-						</ul>
-					</nav>
-
-			</div>
-		</header>
-
-		<nav id="menu">
-			<h2>{{ navbar.name }}</h2>
-			<ul>
-				{% for item in navbar.contents %}
-					<li><a href="{{ item.link }}">{{ item.name }}</a></li>
-				{% endfor %}
-			</ul>
-		</nav>
+	<body class="is-preload">	
 		<div id="wrapper">
+
+			<!-- Wrapper for main content -->
+			<header id="header">
+				<div class="inner">
+					<!-- Logo -->
+						<a href="{{ page.header_link }}" class="logo">
+							<span class="symbol"><img src="{% static page.header_logo %}" alt="" /></span><span class="title">{{ page.header_title }}</span>
+						</a>
+
+					<!-- Nav -->
+						<nav>
+							<ul>
+								<li><a href="#menu">{{ navbar.name }}</a></li>
+							</ul>
+						</nav>
+
+				</div>
+			</header>
+
+			<nav id="menu">
+				<h2>{{ navbar.name }}</h2>
+				<ul>
+					{% for item in navbar.contents %}
+						<li><a href="{{ item.link }}">{{ item.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</nav>
 			{% block content %}
 			{% endblock %}
 		</div>
