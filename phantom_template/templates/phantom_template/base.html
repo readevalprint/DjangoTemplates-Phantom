@@ -14,6 +14,7 @@
 		<noscript><link rel="stylesheet" href="{% static "phantom_template/assets/css/noscript.css" %}" /></noscript>
 	</head>
 	<body class="is-preload">				
+		<!-- Wrapper for main content -->
 		<header id="header">
 			<div class="inner">
 				<!-- Logo -->
@@ -39,7 +40,6 @@
 				{% endfor %}
 			</ul>
 		</nav>
-		<!-- Wrapper for main content -->
 		<div id="wrapper">
 			{% block content %}
 			{% endblock %}
