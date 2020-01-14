@@ -49,19 +49,41 @@
 					"content": "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
 				},
 				{
-					"name": "Tile1",
+					"name": "Tile2",
 					"img": "phantom_template/images/pic02.jpg",
 					"class": "style2",
 					"link": "generic.html",
 					"content": "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
 				},
 				{
-					"name": "Tile1",
+					"name": "Tile3",
 					"img": "phantom_template/images/pic03.jpg",
 					"class": "style3",
 					"link": "generic.html",
 					"content": "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
 				}
+				{
+					"name": "Tile4",
+					"img": "phantom_template/images/pic02.jpg",
+					"class": "style4",
+					"link": "generic.html",
+					"content": "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
+				},
+				{
+					"name": "Tile5",
+					"img": "phantom_template/images/pic02.jpg",
+					"class": "style5",
+					"link": "generic.html",
+					"content": "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
+				},
+				{
+					"name": "Tile6",
+					"img": "phantom_template/images/pic02.jpg",
+					"class": "style6",
+					"link": "generic.html",
+					"content": "Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat."
+				},
+
 			]
 		},
 		{
