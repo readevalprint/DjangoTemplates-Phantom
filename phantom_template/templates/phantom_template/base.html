@@ -13,77 +13,78 @@
 		<link rel="stylesheet" href="{% static "phantom_template/assets/css/main.css" %}" />
 		<noscript><link rel="stylesheet" href="{% static "phantom_template/assets/css/noscript.css" %}" /></noscript>
 	</head>
-	<body class="is-preload">				
-		<header id="header">
-			<div class="inner">
-				<!-- Logo -->
-					<a href="{{ page.header_link }}" class="logo">
-						<span class="symbol"><img src="{% static page.header_logo %}" alt="" /></span><span class="title">{{ page.header_title }}</span>
-					</a>
-
-				<!-- Nav -->
-					<nav>
-						<ul>
-							<li><a href="#menu">{{ navbar.name }}</a></li>
-						</ul>
-					</nav>
-
-			</div>
-		</header>
-
-		<nav id="menu">
-			<h2>{{ navbar.name }}</h2>
-			<ul>
-				{% for item in navbar.contents %}
-					<li><a href="{{ item.link }}">{{ item.name }}</a></li>
-				{% endfor %}
-			</ul>
-		</nav>
-		<!-- Wrapper for main content -->
+	<body class="is-preload">	
 		<div id="wrapper">
+
+			<!-- Wrapper for main content -->
+			<header id="header">
+				<div class="inner">
+					<!-- Logo -->
+						<a href="{{ page.header_link }}" class="logo">
+							<span class="symbol"><img src="{% static page.header_logo %}" alt="" /></span><span class="title">{{ page.header_title }}</span>
+						</a>
+
+					<!-- Nav -->
+						<nav>
+							<ul>
+								<li><a href="#menu">{{ navbar.name }}</a></li>
+							</ul>
+						</nav>
+
+				</div>
+			</header>
+
+			<nav id="menu">
+				<h2>{{ navbar.name }}</h2>
+				<ul>
+					{% for item in navbar.contents %}
+						<li><a href="{{ item.link }}">{{ item.name }}</a></li>
+					{% endfor %}
+				</ul>
+			</nav>
 			{% block content %}
 			{% endblock %}
+		
+
+			<footer id="footer">
+			    <div class="inner">
+				<section>
+				    <h2>{{ footer.get_in_touch.title }}</h2>
+				    <form method="post" action="#">
+					<div class="fields">
+					    <div class="field half">
+						<input type="text" name="name" id="name" placeholder="{{ footer.get_in_touch.name_input_placeholder }}" />
+					    </div>
+					    <div class="field half">
+						<input type="email" name="email" id="email" placeholder="{{ footer.get_in_touch.email_input_placeholder }}" />
+					    </div>
+					    <div class="field">
+						<textarea name="message" id="message" placeholder="{{ footer.get_in_touch.message_input_placeholder }}"></textarea>
+					    </div>
+					</div>
+					<ul class="actions">
+					    <li>
+						<input type="submit" value="{{ footer.get_in_touch.submit_btn_txt }}" class="primary" />
+					    </li>
+					</ul>
+				    </form>
+				</section>
+				<section>
+				    <h2>{{ footer.icon_section.title }}</h2>
+				    <ul class="icons">
+					{% for icon in footer.icons %}
+						<li><a href="{{ icon.link }}" class="icon brands style2 {{ icon.icon }}"><span class="label">{{ icon.name }}</span></a></li>
+					{% endfor %}
+				    </ul>
+				</section>
+				<ul class="copyright">
+					{% for info in footer.bottom_info %}
+					<li>{{ info }}</li>
+				    {% endfor %}
+				</ul>
+			    </div>
+			</footer>
 		</div>
-
-		<footer id="footer">
-		    <div class="inner">
-		        <section>
-		            <h2>{{ footer.get_in_touch.title }}</h2>
-		            <form method="post" action="#">
-		                <div class="fields">
-		                    <div class="field half">
-		                        <input type="text" name="name" id="name" placeholder="{{ footer.get_in_touch.name_input_placeholder }}" />
-		                    </div>
-		                    <div class="field half">
-		                        <input type="email" name="email" id="email" placeholder="{{ footer.get_in_touch.email_input_placeholder }}" />
-		                    </div>
-		                    <div class="field">
-		                        <textarea name="message" id="message" placeholder="{{ footer.get_in_touch.message_input_placeholder }}"></textarea>
-		                    </div>
-		                </div>
-		                <ul class="actions">
-		                    <li>
-		                        <input type="submit" value="{{ footer.get_in_touch.submit_btn_txt }}" class="primary" />
-		                    </li>
-		                </ul>
-		            </form>
-		        </section>
-		        <section>
-		            <h2>{{ footer.icon_section.title }}</h2>
-		            <ul class="icons">
-		            	{% for icon in footer.icons %}
-		                	<li><a href="{{ icon.link }}" class="icon brands style2 {{ icon.icon }}"><span class="label">{{ icon.name }}</span></a></li>
-		            	{% endfor %}
-		            </ul>
-		        </section>
-		        <ul class="copyright">
-		        	{% for info in footer.bottom_info %}
-		            	<li>{{ info }}</li>
-		            {% endfor %}
-		        </ul>
-		    </div>
-		</footer>
-
 		<!-- Scripts -->
 			<script src="{% static "phantom_template/assets/js/jquery.min.js" %}"></script>
 			<script src="{% static "phantom_template/assets/js/browser.min.js" %}"></script>
